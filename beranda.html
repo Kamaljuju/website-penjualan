@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>toko</title>
+</head>
+<script>
+    const text = "Selamat datang di website toko kami";
+    let i = 0;
+  
+    function typeWriter() {
+      if (i < text.length) {
+        document.getElementById("typing-text").innerHTML += text.charAt(i);
+        i++;
+        setTimeout(typeWriter, 100);
+      }
+    }
+  
+    window.onload = typeWriter;
+  </script>
+  
+<body>
+    <nav>
+        <div class="nav-container">
+          <div class="logo">
+            <img src="image/logo.jpg" alt="Logo">
+          </div>
+          <ul class="menu">
+            <li><a href="beranda.html">home</a></li>
+            <li><a href="produk.html">Produk</a></li>
+            <li><a href="kontak.html">kontak</a></li>
+          </ul>
+        </div>
+      </nav>        
+      <div class="content">
+        <h1 id="typing-text"></h1>
+        <p>Kami menyediakan berbagai produk dan jasa berkualitas dengan harga terjangkau.</p>
+      </div>
+    <div class="footer">
+        <p>&copy; 2025 Toko Online. Semua Hak Dilindungi.</p>
+    </div>
+</body>
+</html>
